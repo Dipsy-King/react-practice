@@ -1,0 +1,17 @@
+.header{
+    background-color: #B9B28A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #504B38;
+  }
+  
+  .logo {
+    width: 5rem; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn’t overflow its container */
+  }
+
