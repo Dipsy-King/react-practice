@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app-container{
+  background-color: #3A7D44;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+
+.header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.description {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9DC08B;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dice-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  margin-bottom: 1rem;
 }
 
-.card {
-  padding: 2em;
+
+.dice-container button {
+  height: 5rem;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #DF6D14; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  font-size: 2rem; /* Text size */
+  cursor: pointer; /* Cursor to indicate button click */
+
+  /* Box shadow */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  flex: 0 0 calc(20% - 2rem);
 }
 
-.read-the-docs {
-  color: #888;
+
+.dice-container button:hover {
+  background-color: #b35004; /* Darker shade on hover */
 }
+
+
