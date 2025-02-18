@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50rem;
+    margin: 1rem;
 }
 
 
@@ -53,13 +55,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .meme > img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 3px;
+    
 }
+
+
 
 .meme span {
     position: absolute;

@@ -10,7 +10,9 @@ export default function Main(){
         topText: 'one does not simply',
         bottomText: 'walk into mordor',
         img: "http://i.imgflip.com/1bij.jpg"
-    })
+    });
+
+    const [allMemes, setAllMemes] = useState([]);
 
 
 
@@ -27,7 +29,9 @@ export default function Main(){
                 }
                 // parse json
                 const data = await response.json();
-                console.log(data)
+                console.log(data);
+                console.log(data.data.memes[Math.floor(Math.random() * data.data.memes.length)]);
+                setAllMemes(data.data.memes);
 
             } catch (error) {
                 //handle error
@@ -35,13 +39,10 @@ export default function Main(){
                 // manage loading
             }
         }
-
-
+        // Call the fetchData function
+        fetchMemeData();
 
     },[])
-
-
-
 
 
     //  handle user input change
@@ -54,7 +55,16 @@ export default function Main(){
         })
     }
 
-
+    function getNewMeme(){
+        const randomIndex = Math.floor(Math.random() * allMemes.length);
+        const newMemeUrl = allMemes[randomIndex].url;
+        setMemeState(prevState =>{
+            return{
+                ...prevState,
+                img: newMemeUrl
+            }
+        })
+    }
 
     return (
         <main className={classes.mainContent}>
@@ -81,7 +91,7 @@ export default function Main(){
                     />
                 </label>    
             </div>
-            <button className={classes.memeButton}>Get a new meme image 🖼</button>
+            <button className={classes.memeButton} onClick={getNewMeme}>Get a new meme image 🖼</button>
             <div className={classes.meme}>
                 <img src={memeState.img} />
                 <span className={classes.topText}>{memeState.topText}</span>
