@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export default function Dice({value, isSelected, handleClick, id}){
+export default function Dice({value, isSelected, handleClick, id, gameWon}){
 
     
     return(
@@ -9,7 +9,8 @@ export default function Dice({value, isSelected, handleClick, id}){
             className="dice" 
             id={id}
             style={{backgroundColor : isSelected ? 'green' : 'white' }}
-            onClick={handleClick}>
+            onClick={handleClick}
+            disabled={gameWon}>
                 {value}
             </button>
     )
