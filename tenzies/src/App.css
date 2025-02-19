@@ -14,7 +14,8 @@
 
 .description {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 900;
 }
@@ -32,31 +33,61 @@
 
 .dice-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.dice {
+  height: 5rem;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #DF6D14; /* Button background color */
+  color: black; /* Text color */
+  border: none; /* Remove default border */
+  font-size: 2rem; /* Text size */
+  cursor: pointer; /* Cursor to indicate button click */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 0 0 calc(20% - 2rem);
   margin-bottom: 1rem;
 }
 
 
-.dice-container button {
-  height: 5rem;
-  border-radius: 12px; /* Rounded corners */
-  background-color: #DF6D14; /* Button background color */
-  color: white; /* Text color */
-  border: none; /* Remove default border */
-  font-size: 2rem; /* Text size */
-  cursor: pointer; /* Cursor to indicate button click */
-
-  /* Box shadow */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
-  flex: 0 0 calc(20% - 2rem);
+.dice:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+.dice:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 
-.dice-container button:hover {
-  background-color: #b35004; /* Darker shade on hover */
+
+
+.roll-button {
+  background: #05863b;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
 }
+
+.roll-button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.roll-button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
 
 
