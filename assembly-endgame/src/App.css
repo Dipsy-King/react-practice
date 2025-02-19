@@ -1,0 +1,139 @@
+#root {
+ /* background-colorgb(236, 128, 19)726; */
+ padding: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+header p {
+  max-width: 40rem;
+  font-weight: 100;
+  font-style: italic;
+  margin-block: 4rem;
+}
+
+.game-status {
+  background-color: rgb(8, 95, 8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-block: 5rem;
+}
+
+.languages-section{
+  display: flex;
+  justify-content: center;
+}
+
+.languages-section div {
+  max-width: 30rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.languages-section div span {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.secret-word {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 4rem;
+}
+
+.secret-word span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: #F9F4DA;
+  padding: 1rem;
+  border-bottom: 0.2em solid #F9F4DA;
+}
+
+.keyboard-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.keyboard-section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: 30rem;
+}
+
+.alphabet-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: #F9F4DA;
+  padding: 1rem;
+  border: 0.1em solid #F9F4DA;
+  border-radius: 0.5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.correct{
+  background-color: green;
+}
+
+.incorrect{
+  background-color: red;
+}
+
+
+
+.alphabet-button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.alphabet-button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.new-game-button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 3rem;
+}
+
+.new-game {
+  background: #11B5E5;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 1.5rem;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+.new-game:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.new-game:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+
+

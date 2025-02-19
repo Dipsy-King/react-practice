@@ -1,0 +1,10 @@
+body {
+  background-color: #282726;
+  display: flex;
+  justify-content: center;
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  height: 100vh;
+ }
