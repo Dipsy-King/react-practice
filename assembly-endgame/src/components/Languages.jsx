@@ -1,20 +1,33 @@
-import {languages} from '../assets/languages.js';
-
-export default function Languages(){
-
-    return(
-        <section className='languages-section'>
-                <div>
-                  {languages.map(language =>{
-                    const cssClass = {
-                      backgroundColor: language.backgroundColor,
-                      color: language.color
-                    }
-                    return(
-                      <span key={language.name} style={cssClass}>{language.name}</span>
-                    )
-                  })}
-                </div>
-              </section>
-    )
+export default function Languages({ wrongGuessesCounter, languages }) {
+	let languagesToLoose = wrongGuessesCounter;
+	return (
+		<section className="languages-section">
+			<div className="languages-section-container">
+				{languages.map((language, index) => {
+					const cssStyle = {
+						backgroundColor: language.backgroundColor,
+						color: language.color,
+					};
+					let cssClasse = "";
+					if (languagesToLoose > 0) {
+						cssClasse = "lost";
+						languagesToLoose--;
+					}
+					return (
+						<span
+							key={language.name}
+							className={
+								cssClasse
+									? `languages-section-container-span ${cssClasse}`
+									: "languages-section-container-span"
+							}
+							style={cssStyle}
+						>
+							{language.name}
+						</span>
+					);
+				})}
+			</div>
+		</section>
+	);
 }

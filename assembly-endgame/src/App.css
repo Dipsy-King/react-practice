@@ -1,140 +1,173 @@
 #root {
- /* background-colorgb(236, 128, 19)726; */
- padding: 2rem;
+	/* background-colorgb(236, 128, 19)726; */
+	margin: 2rem;
 }
 
 header {
-  text-align: center;
+	text-align: center;
 }
 
 header p {
-  max-width: 40rem;
-  font-weight: 100;
-  font-style: italic;
-  margin-block: 4rem;
+	max-width: 40rem;
+	font-weight: 100;
+	font-style: italic;
+	margin-block: 2rem;
 }
 
 .game-status {
-  background-color: rgb(8, 95, 8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  margin-block: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+	margin-block: 2rem;
 }
 
-.languages-section{
-  display: flex;
-  justify-content: center;
+.hidden {
+	visibility: hidden; /* Element is hidden, but still takes up space */
 }
 
-.languages-section div {
-  max-width: 30rem;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+.won {
+	background-color: #10a95b;
 }
 
-.languages-section div span {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+.lost {
+	background-color: #ba2a2a;
+}
+
+.farewell {
+	background-color: #7a5ea7;
+	border: 1px dashed #323232;
+}
+
+.languages-section {
+	display: flex;
+	justify-content: center;
+}
+
+.languages-section-container {
+	max-width: 30rem;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.languages-section-container-span {
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	position: relative;
+}
+
+.languages-section-container-span.lost::before {
+	content: "💀";
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	font-size: 0.85rem;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 0.5rem;
 }
 
 .secret-word {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-block: 4rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-block: 2rem;
 }
 
 .secret-word span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #323232;
-  color: #F9F4DA;
-  padding: 1rem;
-  width: 1rem;
-  border-bottom: 0.2em solid #F9F4DA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #323232;
+	color: #f9f4da;
+	padding: 1rem;
+	width: 1rem;
+	height: 1rem;
+	border-bottom: 0.2em solid #f9f4da;
 }
 
-.keyboard-section{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.keyboard-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .keyboard-section div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  max-width: 30rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	max-width: 30rem;
 }
 
 .alphabet-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #323232;
-  color: #F9F4DA;
-  padding: 1rem;
-  border: 0.1em solid #F9F4DA;
-  border-radius: 0.5rem;
-  height: 3rem;
-  cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #323232;
+	color: #f9f4da;
+	padding: 1rem;
+	border: 0.1em solid #f9f4da;
+	border-radius: 0.5rem;
+	height: 3rem;
+	cursor: pointer;
 }
 
-.correct{
-  background-color: green;
+.alphabet-button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
-.incorrect{
-  background-color: red;
+.correct {
+	background-color: green;
 }
 
-
+.incorrect {
+	background-color: red;
+}
 
 .alphabet-button:hover {
-  transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
+	transform: translate(-0.05em, -0.05em);
+	box-shadow: 0.15em 0.15em;
 }
 
 .alphabet-button:active {
-  transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0.05em 0.05em;
 }
 
-.new-game-button-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-block: 3rem;
+.new-game-button-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-block: 3rem;
 }
 
 .new-game {
-  background: #11B5E5;
-  padding: 0.6em 1.3em;
-  font-weight: 900;
-  font-size: 1.5rem;
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
-  cursor: pointer;
+	background: #11b5e5;
+	padding: 0.6em 1.3em;
+	font-weight: 900;
+	font-size: 1.5rem;
+	border: 3px solid black;
+	border-radius: 0.4em;
+	box-shadow: 0.1em 0.1em;
+	cursor: pointer;
 }
 
 .new-game:hover {
-  transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
+	transform: translate(-0.05em, -0.05em);
+	box-shadow: 0.15em 0.15em;
 }
 
 .new-game:active {
-  transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0.05em 0.05em;
 }
-
-
-
