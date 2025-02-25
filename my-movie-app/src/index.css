@@ -247,3 +247,9 @@ body {
 	color: #999;
 	font-size: 0.9rem;
 }
+
+/*//////////////////Login Modal//////////////////*/
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+	backdrop-filter: blur(0.3rem);
+}
